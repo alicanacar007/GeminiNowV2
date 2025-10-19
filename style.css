@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+/* Custom scrollbar styles */
+.plasmo-scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.plasmo-scrollbar-thumb-indigo-200::-webkit-scrollbar-thumb {
+  background-color: rgb(199 210 254);
+  border-radius: 3px;
+}
+
+.plasmo-scrollbar-thumb-indigo-200::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(165 180 252);
+}
+
+.plasmo-scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Custom animations */
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.plasmo-animate-in {
+  animation: animate-in 0.3s ease-out;
+}
+
+/* Smooth backdrop blur fallback */
+@supports not (backdrop-filter: blur(12px)) {
+  .plasmo-backdrop-blur-sm {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Improve text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Google Material Design button styles */
+.google-button {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.google-button:hover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+/* Google Material Design input styles */
+.google-input {
+  transition: all 0.2s ease-in-out;
+}
+
+.google-input:focus {
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+/* Google color palette */
+:root {
+  --google-blue: #4285F4;
+  --google-blue-light: #E8F0FE;
+  --google-gray-50: #FAFAFA;
+  --google-gray-100: #F5F5F5;
+  --google-gray-200: #EEEEEE;
+  --google-gray-300: #E0E0E0;
+  --google-gray-400: #BDBDBD;
+  --google-gray-500: #9E9E9E;
+  --google-gray-600: #757575;
+  --google-gray-700: #616161;
+  --google-gray-800: #424242;
+  --google-gray-900: #212121;
+}
+

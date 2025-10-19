@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+# dependencies
+**/node_modules
+/.pnp
+.pnp.js
+
+
+# Plasmo build outputs
+build/
+.plasmo/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.specstoryservice-account-key.json

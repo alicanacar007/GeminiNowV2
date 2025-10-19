@@ -1,0 +1,51 @@
+{
+  "name": "geminow",
+  "displayName": "GemiNow",
+  "version": "0.0.1",
+  "description": "AI-powered voice assistant for form filling using Google Gemini",
+  "author": "Ali",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package",
+    "icons": "node scripts/generate-icons.js"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.258",
+    "@types/node": "20.11.5",
+    "@types/react": "18.2.48",
+    "@types/react-dom": "18.2.18",
+    "autoprefixer": "^10.4.16",
+    "plasmo": "0.90.5",
+    "postcss": "^8.4.33",
+    "prettier": "3.2.4",
+    "sharp": "^0.34.4",
+    "tailwindcss": "^3.4.1",
+    "typescript": "5.3.3",
+    "ws": "^8.18.3"
+  },
+  "manifest": {
+    "host_permissions": [
+      "https://*/*",
+      "http://*/*"
+    ],
+    "permissions": [
+      "sidePanel",
+      "activeTab",
+      "scripting",
+      "storage",
+      "tabs"
+    ],
+    "action": {
+      "default_title": "Open GemiNow"
+    },
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    }
+  },
+  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd"
+}
