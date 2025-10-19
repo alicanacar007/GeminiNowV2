@@ -52,7 +52,6 @@ export const useWebSocket = () => {
               }
               break
 
-            case "audio":
             case "audio_response":
               // AI's audio response (base64 encoded)
               if (data.audio) {
@@ -117,7 +116,9 @@ export const useWebSocket = () => {
         wsRef.current?.send(
           JSON.stringify({
             type: "audio",
-            audio: base64Audio.split(",")[1] // Remove data:audio/webm;base64, prefix
+            audio: base64Audio.split(",")[1], // Remove data:audio/webm;base64, prefix
+            format: "webm",
+            sampleRate: 16000
           })
         )
       }

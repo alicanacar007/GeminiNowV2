@@ -77,7 +77,11 @@ export default function PermissionPage() {
       <div className="permission-card">
         <div className="header">
           <div className="icon-wrapper">
-            <span className="icon">🎤</span>
+            <img 
+              src="/logo.png" 
+              alt="Google Now" 
+              className="logo"
+            />
           </div>
           <h1 className="title">GemiNow</h1>
           <p className="subtitle">Voice Assistant</p>
